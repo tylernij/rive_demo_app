@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:rive_demo_app/src/demos/avatar_creator/rive_screen.dart';
+import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
 import 'package:rive_demo_app/src/demos/treasure_chest/treasure_chest.dart';
 import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
@@ -10,7 +10,7 @@ const demoConfigurations = <DemoConfiguration>[
   DemoConfiguration(
     displayName: 'Avatar Creator',
     harness: RiveHarness(
-      entryPoint: RiveScreen(),
+      entryPoint: AvatarCreator(),
       showBackButton: false, // We handle this internally.
     ),
   ),

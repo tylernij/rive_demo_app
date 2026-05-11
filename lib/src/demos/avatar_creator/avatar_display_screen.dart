@@ -5,12 +5,15 @@ import 'package:flutter/rendering.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/save_file.dart';
 
+/// Display the final avatar icon for download and viewing.
 class AvatarDisplayScreen extends StatefulWidget {
+  /// Creates a new [AvatarDisplayScreen].
   const AvatarDisplayScreen({
-    super.key,
     required this.parentVmi,
+    super.key,
   });
 
+  /// The top-level view model instance.
   final ViewModelInstance parentVmi;
 
   @override
@@ -44,15 +47,15 @@ class _AvatarDisplayScreenState extends State<AvatarDisplayScreen> {
         ),
       ],
     );
-    await showDialog(context: context, builder: (context) => dialog);
+    await showDialog<void>(context: context, builder: (context) => dialog);
   }
 
   Future<void> _saveAvatar() async {
     final boundary =
-        _screenshotKey.currentContext!.findRenderObject()
+        _screenshotKey.currentContext!.findRenderObject()!
             as RenderRepaintBoundary;
 
-    final image = await boundary.toImage(pixelRatio: 3.0);
+    final image = await boundary.toImage(pixelRatio: 3);
     final byteData = await image.toByteData(format: ImageByteFormat.png);
 
     final pngBytes = byteData!.buffer.asUint8List();
@@ -79,17 +82,14 @@ class _AvatarDisplayScreenState extends State<AvatarDisplayScreen> {
           artboardSelector: ArtboardSelector.byName('PreviewArtboard'),
           builder: (context, state) {
             if (state is! RiveLoaded) {
-              return CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             }
 
             state.controller.artboard.bindViewModelInstance(widget.parentVmi);
 
             return RepaintBoundary(
               key: _screenshotKey,
-              child: RiveWidget(
-                controller: state.controller,
-                fit: Fit.contain,
-              ),
+              child: RiveWidget(controller: state.controller),
             );
           },
         ),

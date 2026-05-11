@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:rive/rive.dart';
 /// See: https://rive.app/docs/runtimes/data-binding
 /// Rive Editor file: https://rive.app/marketplace/25475-47540-data-binding-demo/
 class TreasureChest extends StatefulWidget {
+  /// Creates a new [TreasureChest].
   const TreasureChest({super.key});
 
   @override
@@ -36,7 +38,7 @@ class _TreasureChestState extends State<TreasureChest> {
   @override
   void initState() {
     super.initState();
-    _init();
+    unawaited(_init());
   }
 
   Future<void> _init() async {
@@ -148,10 +150,10 @@ class _TreasureChestState extends State<TreasureChest> {
     super.dispose();
   }
 
-  void _showConfigSheet(BuildContext context) {
+  Future<void> _showConfigSheet(BuildContext context) async {
     if (controller == null) return;
 
-    showModalBottomSheet(
+    await showModalBottomSheet<void>(
       context: context,
       builder: (context) => StatefulBuilder(
         builder: (context, setSheetState) => Container(
@@ -201,8 +203,7 @@ class _TreasureChestState extends State<TreasureChest> {
                         const Color(0xFF00BCD4), // Cyan
                         const Color(0xFFE91E63), // Pink
                       ].map((color) {
-                        // ignore: deprecated_member_use
-                        final isSelected = _selectedColor.value == color.value;
+                        final isSelected = _selectedColor == color;
                         return GestureDetector(
                           onTap: () {
                             setSheetState(() => _selectedColor = color);
@@ -223,8 +224,7 @@ class _TreasureChestState extends State<TreasureChest> {
                               boxShadow: isSelected
                                   ? [
                                       BoxShadow(
-                                        // ignore: deprecated_member_use
-                                        color: color.withOpacity(0.6),
+                                        color: color.withValues(alpha: 0.6),
                                         blurRadius: 8,
                                         spreadRadius: 2,
                                       ),
@@ -247,7 +247,6 @@ class _TreasureChestState extends State<TreasureChest> {
                     energyBarLivesProperty.value = value;
                     setSheetState(() {});
                   },
-                  min: 0,
                   max: 10,
                   divisions: 10,
                   label: 'Lives',

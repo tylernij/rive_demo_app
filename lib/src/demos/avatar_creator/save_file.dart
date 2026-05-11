@@ -4,11 +4,15 @@ import 'dart:typed_data';
 import 'package:file_selector/file_selector.dart';
 import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 
+/// Save an image to the disk.
 class SaveFile {
-  final Uint8List pngBytes;
-
+  /// Creates a new [SaveFile].
   SaveFile({required this.pngBytes});
 
+  /// The PNG bytes to save.
+  final Uint8List pngBytes;
+
+  /// Save the image.
   Future<bool> save() async {
     if (Platform.isAndroid || Platform.isIOS) {
       return _saveFileMobile();
@@ -25,15 +29,13 @@ class SaveFile {
   }
 
   Future<bool> _saveFilePc() async {
-    const String fileName = 'avatar.png';
-    final FileSaveLocation? result = await getSaveLocation(
-      suggestedName: fileName,
-    );
+    const fileName = 'avatar.png';
+    final result = await getSaveLocation(suggestedName: fileName);
 
     if (result == null) return false;
 
-    const String mimeType = 'image/png';
-    final XFile textFile = XFile.fromData(
+    const mimeType = 'image/png';
+    final textFile = XFile.fromData(
       pngBytes,
       mimeType: mimeType,
       name: fileName,

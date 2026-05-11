@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_display_screen.dart';
 
-class RiveScreen extends StatefulWidget {
-  const RiveScreen({super.key});
+/// The avatar creator demo entry.
+class AvatarCreator extends StatefulWidget {
+  /// Creates a new [AvatarCreator].
+  const AvatarCreator({super.key});
 
   @override
-  State<RiveScreen> createState() => _RiveScreenState();
+  State<AvatarCreator> createState() => _AvatarCreatorState();
 }
 
-class _RiveScreenState extends State<RiveScreen> {
+class _AvatarCreatorState extends State<AvatarCreator> {
   late final fileLoader = FileLoader.fromAsset(
     'assets/riv/avatar_creator/avatar_creator.riv',
     riveFactory: Factory.rive,
@@ -58,10 +60,10 @@ class _RiveScreenState extends State<RiveScreen> {
       dataBind: DataBind.auto(),
       builder: (context, state) {
         if (state is! RiveLoaded) {
-          return CircularProgressIndicator();
+          return const Center(child: CircularProgressIndicator());
         }
 
-        vmi = state.viewModelInstance!;
+        vmi = state.viewModelInstance;
         _registerListeners();
 
         return RiveWidget(controller: state.controller, fit: Fit.layout);

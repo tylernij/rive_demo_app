@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rive_demo_app/src/demos/demo_configurations.dart';
-import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 
 /// The home screen displaying the demo list.
 class HomeScreen extends StatefulWidget {
