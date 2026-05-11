@@ -7,8 +7,12 @@ environment:
   sdk: ^3.11.5
 
 dependencies:
+  file_selector: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_exit_app: ^2.1.1
+  image_gallery_saver_plus: ^4.0.1
+  rive: ^0.14.6
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +21,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    # Place .riv files under assets/riv/my_demo_name/ and add the directory below:
+    - assets/riv/avatar_creator/
