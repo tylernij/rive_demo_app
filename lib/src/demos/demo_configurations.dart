@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/rive_screen.dart';
+import 'package:rive_demo_app/src/demos/treasure_chest/treasure_chest.dart';
 
 /// The demo configurations.
 const demoConfigurations = <DemoConfiguration>[
@@ -7,6 +8,12 @@ const demoConfigurations = <DemoConfiguration>[
   DemoConfiguration(
     displayName: 'Avatar Creator',
     entryPoint: RiveScreen(),
+  ),
+
+  // Treasure Chest Demo.
+  DemoConfiguration(
+    displayName: 'Treasure Chest',
+    entryPoint: TreasureChest(),
   ),
 ];
 
