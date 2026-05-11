@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_exit_app/flutter_exit_app.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_display_screen.dart';
 
@@ -25,8 +23,11 @@ class _RiveScreenState extends State<RiveScreen> {
   }
 
   Future<void> _xListener(bool clicked) async {
-    final exited = await FlutterExitApp.exitApp();
-    if (!exited) SystemNavigator.pop();
+    // final exited = await FlutterExitApp.exitApp();
+    // if (!exited) SystemNavigator.pop();
+
+    // For the demo, just go back.
+    Navigator.pop(context);
   }
 
   Future<void> _doneListener(bool clicked) async {

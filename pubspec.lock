@@ -142,14 +142,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_exit_app:
-    dependency: "direct main"
-    description:
-      name: flutter_exit_app
-      sha256: "254bb19c1cee21d9e0588c585fdc8e1546b8551d3e8d4c207235b1491de96f51"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter

@@ -10,7 +10,6 @@ dependencies:
   file_selector: ^1.1.0
   flutter:
     sdk: flutter
-  flutter_exit_app: ^2.1.1
   image_gallery_saver_plus: ^4.0.1
   rive: ^0.14.6
 
