@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rive_demo_app/src/demos/demo_configurations.dart';
+import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 
 /// The home screen displaying the demo list.
 class HomeScreen extends StatefulWidget {
@@ -11,11 +12,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Future<void> _showDemo(Widget entryPoint) async {
+  Future<void> _showDemo(DemoConfiguration config) async {
     await Navigator.push(
       context,
       MaterialPageRoute<void>(
-        builder: (context) => entryPoint,
+        builder: (context) => config.harness,
       ),
     );
   }
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _demoListItem(DemoConfiguration config) {
     return ListTile(
       title: Text(config.displayName),
-      onTap: () async => _showDemo(config.entryPoint),
+      onTap: () async => _showDemo(config),
     );
   }
 
