@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
+import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
 import 'package:rive_demo_app/src/demos/treasure_chest/treasure_chest.dart';
 import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 
 /// The demo configurations.
-const demoConfigurations = <DemoConfiguration>[
+final demoConfigurations = <DemoConfiguration>[
   // Avatar Creator Demo.
-  DemoConfiguration(
+  const DemoConfiguration(
     displayName: 'Avatar Creator',
     harness: RiveHarness(
       entryPoint: AvatarCreator(),
@@ -16,18 +17,27 @@ const demoConfigurations = <DemoConfiguration>[
   ),
 
   // Treasure Chest Demo.
-  DemoConfiguration(
+  const DemoConfiguration(
     displayName: 'Treasure Chest',
     harness: RiveHarness(entryPoint: TreasureChest()),
   ),
 
   // Responsive Layouts Demo.
-  DemoConfiguration(
+  const DemoConfiguration(
     displayName: 'Responsive Layouts',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/responsive_layouts/layouts_demo.riv',
       ),
+    ),
+  ),
+
+  // Duelist.
+  const DemoConfiguration(
+    displayName: 'Duelist',
+    harness: RiveHarness(
+      entryPoint: Duelist(),
+      showBackButton: false,
     ),
   ),
 ];

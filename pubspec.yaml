@@ -23,5 +23,6 @@ flutter:
   assets:
     # Place .riv files under assets/riv/my_demo_name/ and add the directory below:
     - assets/riv/avatar_creator/
+    - assets/riv/duelist/
     - assets/riv/treasure_chest/
     - assets/riv/responsive_layouts/
