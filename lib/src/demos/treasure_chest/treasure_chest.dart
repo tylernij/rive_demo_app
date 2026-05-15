@@ -43,7 +43,7 @@ class _TreasureChestState extends State<TreasureChest> {
 
   Future<void> _init() async {
     file = await File.asset(
-      'assets/riv/treasure_chest/rewards.riv',
+      'assets/riv/treasure_chest/rewards_demo_update.riv',
       riveFactory: Factory.rive,
     );
     controller = RiveWidgetController(file!);
