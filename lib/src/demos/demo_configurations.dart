@@ -52,6 +52,16 @@ final demoConfigurations = <DemoConfiguration>[
       ),
     ),
   ),
+
+  // Feathering Coin Demo.
+  const DemoConfiguration(
+    displayName: 'Data Viz',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/data_viz/data_viz_010.riv',
+      ),
+    ),
+  ),
 ];
 
 /// The configuration profile for each demo.
