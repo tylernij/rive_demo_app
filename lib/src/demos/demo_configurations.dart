@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
 import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
@@ -38,6 +39,17 @@ final demoConfigurations = <DemoConfiguration>[
     harness: RiveHarness(
       entryPoint: Duelist(),
       showBackButton: false,
+    ),
+  ),
+
+  // Feathering Coin Demo.
+  const DemoConfiguration(
+    displayName: 'Coin Feathering',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/feathering_coin/coin_demo_feathering.riv',
+        fit: Fit.contain,
+      ),
     ),
   ),
 ];
