@@ -42,6 +42,7 @@ class _DuelistState extends State<Duelist> {
         return RiveWidget(
           controller: state.controller,
           fit: Fit.layout,
+          layoutScaleFactor: 0.5,
         );
       },
     );

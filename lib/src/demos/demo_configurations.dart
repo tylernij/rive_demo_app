@@ -59,6 +59,7 @@ final demoConfigurations = <DemoConfiguration>[
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/feathering_coin/coin_demo_feathering.riv',
+        layoutScaleFactor: 0.5,
       ),
     ),
   ),
