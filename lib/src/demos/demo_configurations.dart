@@ -71,6 +71,18 @@ final demoConfigurations = <DemoConfiguration>[
       entryPoint: DataViz(),
     ),
   ),
+
+  // Amazon Ad Demo.
+  DemoConfiguration(
+    displayName: 'Amazon Ad',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/amazon_ad/amazon_ad-demo_2025.riv',
+        dataBind: DataBind.auto(),
+        fit: Fit.contain,
+      ),
+    ),
+  ),
 ];
 
 /// The configuration profile for each demo.
