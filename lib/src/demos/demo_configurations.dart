@@ -94,6 +94,120 @@ final demoConfigurations = <DemoConfiguration>[
       ),
     ),
   ),
+
+  // Liquid Download Demo.
+  DemoConfiguration(
+    displayName: 'Liquid Download',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/liquid_download/liquid_download.riv',
+        dataBind: DataBind.auto(),
+        fit: Fit.contain,
+      ),
+    ),
+  ),
+
+  // Scrollytelling Demo.
+  // const DemoConfiguration(
+  //   displayName: 'Scrollytelling',
+  //   harness: RiveHarness(
+  //     entryPoint: GenericRive(
+  //       assetPath:
+  //           'assets/riv/scrollytelling/scrolly-telling-vertical-responsive.riv',
+  //     ),
+  //   ),
+  // ),
+
+  // Scrollytelling Raster Demo.
+  const DemoConfiguration(
+    displayName: 'Scrollytelling Raster',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath:
+            'assets/riv/scrollytelling_raster/scrolly-telling-raster.riv',
+      ),
+    ),
+  ),
+
+  // Car Widget Demo.
+  const DemoConfiguration(
+    displayName: 'Car Widget',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/car_widget/car_widgets_v01.riv',
+      ),
+    ),
+  ),
+
+  // Fintech Demo.
+  const DemoConfiguration(
+    displayName: 'Fintech',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/fintech/fintech_data_viz_v03.riv',
+      ),
+    ),
+  ),
+
+  // Game Character Demo.
+  const DemoConfiguration(
+    displayName: 'Game Character',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/game_character/game_character_demo.riv',
+      ),
+    ),
+  ),
+
+  // Car Component Demo.
+  const DemoConfiguration(
+    displayName: 'Car Component',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/car_component/car_component_demo.riv',
+      ),
+    ),
+  ),
+
+  // Music Player Demo.
+  const DemoConfiguration(
+    displayName: 'Music Player',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/music_player/music_player.riv',
+      ),
+    ),
+  ),
+
+  // Slot Machine Demo.
+  const DemoConfiguration(
+    displayName: 'Slot Machine',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/slot_machine/slot_machine.riv',
+      ),
+    ),
+  ),
+
+  // Inventory Demo.
+  const DemoConfiguration(
+    displayName: 'Inventory',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/inventory/inventory_demo_test_v2.riv',
+      ),
+    ),
+  ),
+
+  // Sports Broadcast Demo.
+  const DemoConfiguration(
+    displayName: 'Sports Broadcast',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
+      ),
+    ),
+  ),
 ];
 
 /// The configuration profile for each demo.
