@@ -9,6 +9,7 @@ class GenericRive extends StatefulWidget {
     this.artboardName,
     this.stateMachineName,
     this.fit = Fit.layout,
+    this.layoutScaleFactor = RiveDefaults.layoutScaleFactor,
     this.dataBind,
     super.key,
   });
@@ -24,6 +25,9 @@ class GenericRive extends StatefulWidget {
 
   /// The fit to use.
   final Fit fit;
+
+  /// The layout scale factor to use.
+  final double layoutScaleFactor;
 
   /// The data binding mode.
   final DataBind? dataBind;
@@ -63,6 +67,7 @@ class _GenericRiveState extends State<GenericRive> {
         return RiveWidget(
           controller: state.controller,
           fit: widget.fit,
+          layoutScaleFactor: widget.layoutScaleFactor,
         );
       },
     );
