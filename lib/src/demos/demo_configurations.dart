@@ -83,6 +83,17 @@ final demoConfigurations = <DemoConfiguration>[
       ),
     ),
   ),
+
+  // RTL Language Layout Demo.
+  DemoConfiguration(
+    displayName: 'RTL Language Layout',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath: 'assets/riv/rtl_language_layout/rtllanguagelayout.riv',
+        dataBind: DataBind.auto(),
+      ),
+    ),
+  ),
 ];
 
 /// The configuration profile for each demo.
