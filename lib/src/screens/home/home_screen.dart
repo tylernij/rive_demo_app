@@ -65,9 +65,16 @@ class _HomeScreenState extends State<HomeScreen> {
           if (config != null) _bindTriggerToConfig(select, config);
         }
 
-        return RiveWidget(
-          controller: state.controller,
-          fit: Fit.layout,
+        return ColoredBox(
+          color: const Color(0xffE0E0E0),
+          child: SafeArea(
+            bottom: false,
+            child: RiveWidget(
+              controller: state.controller,
+              fit: Fit.layout,
+              layoutScaleFactor: 0.5,
+            ),
+          ),
         );
       },
     );

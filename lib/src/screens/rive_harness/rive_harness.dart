@@ -27,7 +27,7 @@ class _HarnessState extends State<RiveHarness> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: widget.entryPoint,
+      body: SafeArea(bottom: false, child: widget.entryPoint),
       floatingActionButton: widget.showBackButton
           ? FloatingActionButton.small(
               child: const Icon(Icons.arrow_back),
