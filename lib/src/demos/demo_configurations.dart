@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
+import 'package:rive_demo_app/src/demos/data_viz/data_viz.dart';
 import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
 import 'package:rive_demo_app/src/demos/treasure_chest/treasure_chest.dart';
@@ -57,9 +58,7 @@ final demoConfigurations = <DemoConfiguration>[
   const DemoConfiguration(
     displayName: 'Data Viz',
     harness: RiveHarness(
-      entryPoint: GenericRive(
-        assetPath: 'assets/riv/data_viz/data_viz_010.riv',
-      ),
+      entryPoint: DataViz(),
     ),
   ),
 ];
