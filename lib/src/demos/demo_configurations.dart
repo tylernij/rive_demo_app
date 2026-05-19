@@ -108,15 +108,15 @@ final demoConfigurations = <DemoConfiguration>[
   ),
 
   // Scrollytelling Demo.
-  // const DemoConfiguration(
-  //   displayName: 'Scrollytelling',
-  //   harness: RiveHarness(
-  //     entryPoint: GenericRive(
-  //       assetPath:
-  //           'assets/riv/scrollytelling/scrolly-telling-vertical-responsive.riv',
-  //     ),
-  //   ),
-  // ),
+  const DemoConfiguration(
+    displayName: 'Scrollytelling',
+    harness: RiveHarness(
+      entryPoint: GenericRive(
+        assetPath:
+            'assets/riv/scrollytelling/scrolly-telling-vertical-responsive.riv',
+      ),
+    ),
+  ),
 
   // Scrollytelling Raster Demo.
   const DemoConfiguration(
