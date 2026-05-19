@@ -26,5 +26,6 @@ flutter:
     - assets/riv/duelist/
     - assets/riv/treasure_chest/
     - assets/riv/responsive_layouts/
+    - assets/riv/feathering_button/
     - assets/riv/feathering_coin/
     - assets/riv/data_viz/
