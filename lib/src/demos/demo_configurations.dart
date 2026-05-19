@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
 import 'package:rive_demo_app/src/demos/data_viz/data_viz.dart';
 import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
@@ -49,7 +48,6 @@ final demoConfigurations = <DemoConfiguration>[
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/feathering_coin/coin_demo_feathering.riv',
-        fit: Fit.contain,
       ),
     ),
   ),
