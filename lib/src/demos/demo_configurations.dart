@@ -17,13 +17,10 @@ final demoConfigurations = <DemoConfiguration>[
   adWidgetConfig,
   carWidgetConfig,
   dataVizConfig,
-
-  // Done, but might not include:
-  //
-  // rtlLanguageLayoutConfig,
-  // featheringButtonConfig,
-  // featheringCoinConfig,
-  // sportsBroadcastConfig,
+  rtlLanguageLayoutConfig,
+  featheringButtonConfig,
+  featheringCoinConfig,
+  sportsBroadcastConfig,
 
   // Not done, might not include
   //
@@ -134,13 +131,14 @@ final liquidDownloadConfig = DemoConfiguration(
 );
 
 /// Scrollytelling Demo.
-const scrollytellingConfig = DemoConfiguration(
+final scrollytellingConfig = DemoConfiguration(
   displayName: 'Scrollytelling',
   description: 'Set my description, please!',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath:
           'assets/riv/scrollytelling/scrolly-telling-vertical-responsive.riv',
+      dataBind: DataBind.auto(),
     ),
   ),
 );
