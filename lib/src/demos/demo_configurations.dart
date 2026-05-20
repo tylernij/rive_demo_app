@@ -72,14 +72,13 @@ final demoConfigurations = <DemoConfiguration>[
     ),
   ),
 
-  // Amazon Ad Demo.
+  // Ad Widget Demo.
   DemoConfiguration(
-    displayName: 'Amazon Ad',
+    displayName: 'Ad Widget',
     harness: RiveHarness(
       entryPoint: GenericRive(
-        assetPath: 'assets/riv/amazon_ad/amazon_ad-demo_2025.riv',
+        assetPath: 'assets/riv/ad_widget/amazon_ad-demo_2026.riv',
         dataBind: DataBind.auto(),
-        fit: Fit.contain,
       ),
     ),
   ),
