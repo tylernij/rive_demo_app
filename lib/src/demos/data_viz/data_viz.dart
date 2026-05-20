@@ -14,7 +14,7 @@ class DataViz extends StatefulWidget {
 
 class _DataVizState extends State<DataViz> {
   late final _fileLoader = FileLoader.fromAsset(
-    'assets/riv/data_viz/data_viz_010.riv',
+    'assets/riv/data_viz/data_viz_demo_v2.riv',
     riveFactory: Factory.rive,
   );
 
