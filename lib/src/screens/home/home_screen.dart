@@ -30,19 +30,22 @@ class _HomeScreenState extends State<HomeScreen> {
     final instance = file.viewModelByName('Item')!.createDefaultInstance()!;
     final nameProp = instance.string('name')!;
     final descriptionProp = instance.string('description')!;
-    final clickProp = instance.trigger('click')!;
-
     nameProp.value = config.displayName;
     descriptionProp.value = config.description;
 
-    clickProp.addListener((value) async {
+    return instance;
+  }
+
+  void _bindTriggerToConfig(
+    ViewModelInstanceTrigger trigger,
+    DemoConfiguration config,
+  ) {
+    trigger.addListener((value) async {
       await Navigator.push(
         context,
         MaterialPageRoute<void>(builder: (context) => config.harness),
       );
     });
-
-    return instance;
   }
 
   @override
@@ -57,6 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
         for (final config in demoConfigurations) {
           final listItemInstance = _createListItemInstance(state.file, config);
           listProp.add(listItemInstance);
+
+          // Bind to already-created instance so trigger fires.
+          final realListItemInstance = listProp.instanceAt(listProp.length - 1);
+          final clickProp = realListItemInstance.trigger('click')!;
+          _bindTriggerToConfig(clickProp, config);
         }
       },
       builder: (context, state) {
