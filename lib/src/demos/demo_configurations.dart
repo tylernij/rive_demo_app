@@ -96,8 +96,8 @@ final demoConfigurations = <DemoConfiguration>[
     description: 'Set my description, please!',
     harness: RiveHarness(
       useSafeArea: true,
-      safeAreaLayouts: {SafeAreaLayout.bottom},
-      backgroundColor: Color(0xFFCCCCCC),
+      safeAreaLayouts: const {SafeAreaLayout.bottom},
+      backgroundColor: const Color(0xFFCCCCCC),
       entryPoint: GenericRive(
         assetPath: 'assets/riv/rtl_language_layout/rtllanguagelayout.riv',
         dataBind: DataBind.auto(),
@@ -227,7 +227,6 @@ final demoConfigurations = <DemoConfiguration>[
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
-        fit: Fit.layout,
         dataBind: DataBind.auto(),
       ),
     ),
