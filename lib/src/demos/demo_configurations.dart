@@ -20,6 +20,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Treasure Chest Demo.
   const DemoConfiguration(
     displayName: 'Rewards Demo',
+    description: 'Set my description, please!',
     harness: RiveHarness(entryPoint: TreasureChest()),
   ),
 
@@ -36,6 +37,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Duelist.
   const DemoConfiguration(
     displayName: 'Duelist',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: Duelist(),
       showBackButton: false,
@@ -45,6 +47,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Feathering Button Demo.
   DemoConfiguration(
     displayName: 'Feathering Button',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/feathering_button/push_button.riv',
@@ -56,6 +59,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Feathering Coin Demo.
   const DemoConfiguration(
     displayName: 'Feathering Coin',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/feathering_coin/coin_demo_feathering.riv',
@@ -67,6 +71,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Data Visualization Demo.
   const DemoConfiguration(
     displayName: 'Data Viz',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: DataViz(),
     ),
@@ -75,6 +80,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Ad Widget Demo.
   DemoConfiguration(
     displayName: 'Ad Widget',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/ad_widget/amazon_ad-demo_2026.riv',
@@ -86,6 +92,7 @@ final demoConfigurations = <DemoConfiguration>[
   // RTL Language Layout Demo.
   DemoConfiguration(
     displayName: 'RTL Language Layout',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/rtl_language_layout/rtllanguagelayout.riv',
@@ -97,6 +104,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Liquid Download Demo.
   DemoConfiguration(
     displayName: 'Liquid Download',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/liquid_download/liquid_download.riv',
@@ -109,6 +117,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Scrollytelling Demo.
   const DemoConfiguration(
     displayName: 'Scrollytelling',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath:
@@ -120,6 +129,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Scrollytelling Raster Demo.
   const DemoConfiguration(
     displayName: 'Scrollytelling Raster',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath:
@@ -131,6 +141,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Car Widget Demo.
   const DemoConfiguration(
     displayName: 'Car Widget',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/car_widget/car_widgets_v01.riv',
@@ -141,6 +152,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Fintech Demo.
   const DemoConfiguration(
     displayName: 'Fintech',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/fintech/fintech_data_viz_v03.riv',
@@ -151,6 +163,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Game Character Demo.
   const DemoConfiguration(
     displayName: 'Game Character',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/game_character/game_character_demo.riv',
@@ -161,6 +174,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Car Component Demo.
   const DemoConfiguration(
     displayName: 'Car Component',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/car_component/car_component_demo.riv',
@@ -171,6 +185,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Music Player Demo.
   const DemoConfiguration(
     displayName: 'Music Player',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/music_player/music_player.riv',
@@ -181,6 +196,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Slot Machine Demo.
   const DemoConfiguration(
     displayName: 'Slot Machine',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/slot_machine/slot_machine.riv',
@@ -191,6 +207,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Inventory Demo.
   const DemoConfiguration(
     displayName: 'Inventory',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/inventory/inventory_demo_test_v2.riv',
@@ -201,6 +218,7 @@ final demoConfigurations = <DemoConfiguration>[
   // Sports Broadcast Demo.
   const DemoConfiguration(
     displayName: 'Sports Broadcast',
+    description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
@@ -214,11 +232,15 @@ class DemoConfiguration {
   /// Creates a new [DemoConfiguration].
   const DemoConfiguration({
     required this.displayName,
+    required this.description,
     required this.harness,
   });
 
   /// The demo display name.
   final String displayName;
+
+  /// The demo description.
+  final String description;
 
   /// The demo entry point, typically in a harness.
   /// See [RiveHarness] for advanced configuration.
