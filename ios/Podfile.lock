@@ -27,7 +27,7 @@ SPEC CHECKSUMS:
   file_selector_ios: ec57ec07954363dd730b642e765e58f199bb621a
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   image_gallery_saver_plus: e597bf65a7846979417a3eae0763b71b6dfec6c3
-  rive_native: c9ed76ccf380f38205edcb8f552121aac8ec39da
+  rive_native: c8fbe631855835dc84f7d59befcdb43de3ac48d4
 
 PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
 
