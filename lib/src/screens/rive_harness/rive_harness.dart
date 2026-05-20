@@ -7,6 +7,11 @@ class RiveHarness extends StatefulWidget {
   const RiveHarness({
     required this.entryPoint,
     this.showBackButton = true,
+    this.backButtonPlatforms = const {
+      TargetPlatform.linux,
+      TargetPlatform.windows,
+      TargetPlatform.macOS,
+    },
     this.backButtonLocation = FloatingActionButtonLocation.miniStartFloat,
     this.useSafeArea = false,
     this.backgroundColor,
@@ -24,6 +29,9 @@ class RiveHarness extends StatefulWidget {
 
   /// Whether or not to add a back button.
   final bool showBackButton;
+
+  /// Which platforms to show the back button for.
+  final Set<TargetPlatform> backButtonPlatforms;
 
   /// The positioning of the back button.
   final FloatingActionButtonLocation backButtonLocation;
@@ -60,9 +68,17 @@ class _HarnessState extends State<RiveHarness> {
       );
     }
 
+    // Check if our current platform should show the back button.
+    final targetPlatform = Theme.of(context).platform;
+    final shouldShowBackButton =
+        widget.showBackButton &&
+        widget.backButtonPlatforms.contains(
+          targetPlatform,
+        );
+
     return Scaffold(
       body: entryPoint,
-      floatingActionButton: widget.showBackButton
+      floatingActionButton: shouldShowBackButton
           ? FloatingActionButton.small(
               child: const Icon(Icons.arrow_back),
               onPressed: () => Navigator.pop(context),
