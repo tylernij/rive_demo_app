@@ -24,7 +24,6 @@ flutter:
     # Place .riv files under assets/riv/my_demo_name/ and add the directory below:
     - assets/riv/avatar_creator/
     - assets/riv/duelist/
-    - assets/riv/treasure_chest/
     - assets/riv/responsive_layouts/
     - assets/riv/feathering_button/
     - assets/riv/feathering_coin/
@@ -32,3 +31,15 @@ flutter:
     - assets/riv/ad_widget/
     - assets/riv/rtl_language_layout/
     - assets/riv/home/
+    - assets/riv/liquid_download/
+    - assets/riv/scrollytelling/
+    - assets/riv/scrollytelling_raster/
+    - assets/riv/car_widget/
+    - assets/riv/fintech/
+    - assets/riv/game_character/
+    - assets/riv/car_component/
+    - assets/riv/music_player/
+    - assets/riv/treasure_chest/
+    - assets/riv/slot_machine/
+    - assets/riv/inventory/
+    - assets/riv/sports_broadcast/
