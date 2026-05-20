@@ -217,12 +217,14 @@ final demoConfigurations = <DemoConfiguration>[
   ),
 
   // Sports Broadcast Demo.
-  const DemoConfiguration(
+  DemoConfiguration(
     displayName: 'Sports Broadcast',
     description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
+        fit: Fit.contain,
+        dataBind: DataBind.auto(),
       ),
     ),
   ),
