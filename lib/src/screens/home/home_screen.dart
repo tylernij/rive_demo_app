@@ -23,47 +23,45 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  DemoConfiguration? _getConfigFromName(String name) {
-    final matches = demoConfigurations.where(
-      (config) => config.displayName.toLowerCase() == name.toLowerCase(),
-    );
-    if (matches.isEmpty) return null;
-    return matches.first;
-  }
-
-  void _bindTriggerToConfig(
-    ViewModelInstanceTrigger trigger,
+  ViewModelInstance _createListItemInstance(
+    File file,
     DemoConfiguration config,
   ) {
-    trigger.addListener((value) async {
+    final instance = file.viewModelByName('Item')!.createDefaultInstance()!;
+    final nameProp = instance.string('name')!;
+    final descriptionProp = instance.string('description')!;
+    final clickProp = instance.trigger('click')!;
+
+    nameProp.value = config.displayName;
+    descriptionProp.value = config.description;
+
+    clickProp.addListener((value) async {
       await Navigator.push(
         context,
         MaterialPageRoute<void>(builder: (context) => config.harness),
       );
     });
+
+    return instance;
   }
 
   @override
   Widget build(BuildContext context) {
     return RiveWidgetBuilder(
       fileLoader: _fileLoader,
-      dataBind: DataBind.auto(),
+      dataBind: DataBind.empty(),
+      onLoaded: (state) {
+        // Bind list entries to entries.
+        final vmi = state.viewModelInstance!;
+        final listProp = vmi.list('listProperty')!;
+        for (final config in demoConfigurations) {
+          final listItemInstance = _createListItemInstance(state.file, config);
+          listProp.add(listItemInstance);
+        }
+      },
       builder: (context, state) {
         if (state is! RiveLoaded) {
           return const Center(child: CircularProgressIndicator());
-        }
-
-        // Bind list entries to entries.
-
-        final vmi = state.viewModelInstance!;
-        final list = vmi.list('listProperty')!;
-        for (var i = 0; i < list.length; i++) {
-          final item = list.instanceAt(i);
-          final name = item.string('name')!.value;
-          final select = item.trigger('click')!;
-          final config = _getConfigFromName(name);
-
-          if (config != null) _bindTriggerToConfig(select, config);
         }
 
         return ColoredBox(
