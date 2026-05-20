@@ -194,12 +194,13 @@ final demoConfigurations = <DemoConfiguration>[
   ),
 
   // Slot Machine Demo.
-  const DemoConfiguration(
+  DemoConfiguration(
     displayName: 'Slot Machine',
     description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/slot_machine/slot_machine.riv',
+        dataBind: DataBind.auto(),
       ),
     ),
   ),
