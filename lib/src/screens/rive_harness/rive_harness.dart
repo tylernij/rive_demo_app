@@ -50,6 +50,18 @@ class RiveHarness extends StatefulWidget {
 }
 
 class _HarnessState extends State<RiveHarness> {
+  Widget _backButton() {
+    return FloatingActionButton.small(
+      shape: const CircleBorder(),
+      backgroundColor: Colors.black,
+      onPressed: () => Navigator.pop(context),
+      child: const Icon(
+        Icons.arrow_back,
+        color: Color(0xffffa31c),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var entryPoint = widget.entryPoint;
@@ -78,12 +90,7 @@ class _HarnessState extends State<RiveHarness> {
 
     return Scaffold(
       body: entryPoint,
-      floatingActionButton: shouldShowBackButton
-          ? FloatingActionButton.small(
-              child: const Icon(Icons.arrow_back),
-              onPressed: () => Navigator.pop(context),
-            )
-          : null,
+      floatingActionButton: shouldShowBackButton ? _backButton() : null,
       floatingActionButtonLocation: FloatingActionButtonLocation.miniStartFloat,
     );
   }
