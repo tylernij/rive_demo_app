@@ -46,7 +46,20 @@ class _HomeScreenState extends State<HomeScreen> {
         PageRouteBuilder<void>(
           pageBuilder: (_, _, _) => config.harness,
           transitionsBuilder: (context, a, b, widget) {
-            return FadeTransition(opacity: a, child: widget);
+            const begin = Offset(0, -1);
+            const end = Offset.zero;
+            const curve = Curves.ease;
+
+            final tween = Tween(
+              begin: begin,
+              end: end,
+            ).chain(CurveTween(curve: curve));
+
+            // Slide down.
+            return SlideTransition(
+              position: a.drive(tween),
+              child: widget,
+            );
           },
         ),
       );
