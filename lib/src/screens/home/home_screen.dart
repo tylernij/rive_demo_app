@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late final _fileLoader = FileLoader.fromAsset(
-    'assets/riv/home/rive_demo_app_v01.riv',
+    'assets/riv/home/rive_demo_app_v02.riv',
     riveFactory: Factory.rive,
   );
 
@@ -54,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
 
         // Bind list entries to entries.
+
         final vmi = state.viewModelInstance!;
         final list = vmi.list('listProperty')!;
         for (var i = 0; i < list.length; i++) {
@@ -72,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: RiveWidget(
               controller: state.controller,
               fit: Fit.layout,
-              layoutScaleFactor: 0.5,
+              layoutScaleFactor: 0.35,
             ),
           ),
         );
