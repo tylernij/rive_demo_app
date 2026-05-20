@@ -9,24 +9,30 @@ import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 
 /// The demo configurations, ordered.
 final demoConfigurations = <DemoConfiguration>[
-  treasureChestConfig,
   duelistConfig,
-  featheringButtonConfig,
-  featheringCoinConfig,
-  dataVizConfig,
-  adWidgetConfig,
-  rtlLanguageLayoutConfig,
-  liquidDownloadConfig,
-  scrollytellingConfig,
-  scrollytellingRasterConfig,
-  carWidgetConfig,
-  fintechConfig,
-  gameCharacterConfig,
-  carComponentConfig,
-  musicPlayerConfig,
   slotMachineConfig,
-  inventoryConfig,
-  sportsBroadcastConfig,
+  scrollytellingConfig,
+  treasureChestConfig,
+  fintechConfig,
+  adWidgetConfig,
+  carWidgetConfig,
+  dataVizConfig,
+
+  // Done, but might not include:
+  //
+  // rtlLanguageLayoutConfig,
+  // featheringButtonConfig,
+  // featheringCoinConfig,
+  // sportsBroadcastConfig,
+
+  // Not done, might not include
+  //
+  // liquidDownloadConfig,
+  // scrollytellingRasterConfig,
+  // gameCharacterConfig,
+  // carComponentConfig,
+  // musicPlayerConfig,
+  // inventoryConfig,
 ];
 
 /// ============================== CONFIGURATIONS ==============================
@@ -36,7 +42,12 @@ final demoConfigurations = <DemoConfiguration>[
 const treasureChestConfig = DemoConfiguration(
   displayName: 'Treasure Chest',
   description: 'Set my description, please!',
-  harness: RiveHarness(entryPoint: TreasureChest()),
+  harness: RiveHarness(
+    entryPoint: TreasureChest(),
+    useSafeArea: true,
+    safeAreaLayouts: const {SafeAreaLayout.top},
+    backgroundColor: const Color(0xFF312030),
+  ),
 );
 
 /// Duelist Demo.

@@ -286,7 +286,7 @@ class _TreasureChestState extends State<TreasureChest> {
         RiveWidget(
           controller: controller,
           fit: Fit.layout, // for responsive layouts
-          layoutScaleFactor: 1 / 2.0,
+          layoutScaleFactor: 1 / 3.0,
         ),
         Positioned(
           bottom: 16,
