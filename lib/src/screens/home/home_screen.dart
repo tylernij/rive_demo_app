@@ -43,7 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
     trigger.addListener((value) async {
       await Navigator.push(
         context,
-        MaterialPageRoute<void>(builder: (context) => config.harness),
+        PageRouteBuilder<void>(
+          pageBuilder: (_, _, _) => config.harness,
+          transitionsBuilder: (context, a, b, widget) {
+            return FadeTransition(opacity: a, child: widget);
+          },
+        ),
       );
     });
   }
