@@ -4,6 +4,7 @@ import 'package:rive_demo_app/src/demos/data_viz/data_viz.dart';
 import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
 import 'package:rive_demo_app/src/demos/treasure_chest/treasure_chest.dart';
+import 'package:rive_demo_app/src/model/safe_area_layout.dart';
 import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 
 /// The demo configurations.
@@ -94,6 +95,9 @@ final demoConfigurations = <DemoConfiguration>[
     displayName: 'RTL Language Layout',
     description: 'Set my description, please!',
     harness: RiveHarness(
+      useSafeArea: true,
+      safeAreaLayouts: {SafeAreaLayout.bottom},
+      backgroundColor: Color(0xFFCCCCCC),
       entryPoint: GenericRive(
         assetPath: 'assets/riv/rtl_language_layout/rtllanguagelayout.riv',
         dataBind: DataBind.auto(),
