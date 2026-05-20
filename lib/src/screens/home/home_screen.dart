@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late final _fileLoader = FileLoader.fromAsset(
-    'assets/riv/home/rive_demo_app_v01.riv',
+    'assets/riv/home/rive_demo_app_v02.riv',
     riveFactory: Factory.rive,
   );
 
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
         for (var i = 0; i < list.length; i++) {
           final item = list.instanceAt(i);
           final name = item.string('name')!.value;
-          final select = item.trigger('select')!;
+          final select = item.trigger('click')!;
           final config = _getConfigFromName(name);
 
           if (config != null) _bindTriggerToConfig(select, config);
