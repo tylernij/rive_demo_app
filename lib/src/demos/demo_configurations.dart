@@ -223,7 +223,7 @@ final demoConfigurations = <DemoConfiguration>[
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
-        fit: Fit.contain,
+        fit: Fit.layout,
         dataBind: DataBind.auto(),
       ),
     ),
