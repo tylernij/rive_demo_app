@@ -66,9 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
         }
 
         return ColoredBox(
-          color: const Color(0xffE0E0E0),
+          color: Colors.black,
           child: SafeArea(
-            bottom: false,
             child: RiveWidget(
               controller: state.controller,
               fit: Fit.layout,
