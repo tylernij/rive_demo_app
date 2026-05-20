@@ -154,12 +154,15 @@ final demoConfigurations = <DemoConfiguration>[
   ),
 
   // Fintech Demo.
-  const DemoConfiguration(
+  DemoConfiguration(
     displayName: 'Fintech',
     description: 'Set my description, please!',
     harness: RiveHarness(
       entryPoint: GenericRive(
         assetPath: 'assets/riv/fintech/fintech_data_viz_v03.riv',
+        fit: Fit.layout,
+        dataBind: DataBind.auto(),
+        layoutScaleFactor: 0.5,
       ),
     ),
   ),
