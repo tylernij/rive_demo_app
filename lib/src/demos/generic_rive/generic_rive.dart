@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
+import 'package:rive_demo_app/src/model/safe_area_layout.dart';
 
 /// A generic .riv file builder.
 class GenericRive extends StatefulWidget {
@@ -10,6 +11,14 @@ class GenericRive extends StatefulWidget {
     this.stateMachineName,
     this.fit = Fit.layout,
     this.layoutScaleFactor = RiveDefaults.layoutScaleFactor,
+    this.useSafeArea = false,
+    this.backgroundColor,
+    this.safeAreaLayouts = const {
+      SafeAreaLayout.left,
+      SafeAreaLayout.right,
+      SafeAreaLayout.bottom,
+      SafeAreaLayout.top,
+    },
     this.dataBind,
     super.key,
   });
@@ -28,6 +37,15 @@ class GenericRive extends StatefulWidget {
 
   /// The layout scale factor to use.
   final double layoutScaleFactor;
+
+  /// Avoid display cut-outs.
+  final bool useSafeArea;
+
+  /// Background color to display behind the Rive widget.
+  final Color? backgroundColor;
+
+  /// Which sides to use for the [SafeArea].
+  final Set<SafeAreaLayout> safeAreaLayouts;
 
   /// The data binding mode.
   final DataBind? dataBind;
@@ -64,11 +82,27 @@ class _GenericRiveState extends State<GenericRive> {
           return const Center(child: CircularProgressIndicator());
         }
 
-        return RiveWidget(
+        final riveWidget = RiveWidget(
           controller: state.controller,
           fit: widget.fit,
           layoutScaleFactor: widget.layoutScaleFactor,
         );
+
+        // Protect from device cut-outs if specified.
+        if (widget.useSafeArea) {
+          return ColoredBox(
+            color: widget.backgroundColor ?? Colors.black,
+            child: SafeArea(
+              left: widget.safeAreaLayouts.contains(SafeAreaLayout.left),
+              right: widget.safeAreaLayouts.contains(SafeAreaLayout.right),
+              top: widget.safeAreaLayouts.contains(SafeAreaLayout.top),
+              bottom: widget.safeAreaLayouts.contains(SafeAreaLayout.bottom),
+              child: riveWidget,
+            ),
+          );
+        }
+
+        return riveWidget;
       },
     );
   }

@@ -19,7 +19,7 @@ final demoConfigurations = <DemoConfiguration>[
 
   // Treasure Chest Demo.
   const DemoConfiguration(
-    displayName: 'Rewards Demo',
+    displayName: 'Treasure Chest',
     description: 'Set my description, please!',
     harness: RiveHarness(entryPoint: TreasureChest()),
   ),
