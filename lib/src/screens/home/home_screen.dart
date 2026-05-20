@@ -60,16 +60,15 @@ class _HomeScreenState extends State<HomeScreen> {
         for (var i = 0; i < list.length; i++) {
           final item = list.instanceAt(i);
           final name = item.string('name')!.value;
-          final select = item.trigger('select')!;
+          final select = item.trigger('click')!;
           final config = _getConfigFromName(name);
 
           if (config != null) _bindTriggerToConfig(select, config);
         }
 
         return ColoredBox(
-          color: const Color(0xffE0E0E0),
+          color: Colors.black,
           child: SafeArea(
-            bottom: false,
             child: RiveWidget(
               controller: state.controller,
               fit: Fit.layout,

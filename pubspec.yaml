@@ -28,7 +28,7 @@ flutter:
     - assets/riv/feathering_button/
     - assets/riv/feathering_coin/
     - assets/riv/data_viz/
-    - assets/riv/amazon_ad/
+    - assets/riv/ad_widget/
     - assets/riv/rtl_language_layout/
     - assets/riv/home/
     - assets/riv/liquid_download/
