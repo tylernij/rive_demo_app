@@ -10,7 +10,9 @@ import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 /// The demo configurations, ordered.
 final demoConfigurations = <DemoConfiguration>[
   duelistConfig,
+  characterCardConfig,
   slotMachineConfig,
+  aiDjConfig,
   scrollytellingConfig,
   treasureChestConfig,
   fintechConfig,
@@ -65,6 +67,34 @@ final featheringButtonConfig = DemoConfiguration(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/feathering_button/push_button.riv',
       dataBind: DataBind.auto(),
+    ),
+  ),
+);
+
+/// AI DJ Demo.
+final aiDjConfig = DemoConfiguration(
+  displayName: 'AI DJ Music Player',
+  description: 'Set my description, please!',
+  harness: RiveHarness(
+    entryPoint: GenericRive(
+      assetPath: 'assets/riv/ai_dj/ai_dj_demo.riv',
+      dataBind: DataBind.auto(),
+      fit: Fit.layout,
+      layoutScaleFactor: 0.5,
+    ),
+  ),
+);
+
+/// AI DJ Demo.
+final characterCardConfig = DemoConfiguration(
+  displayName: 'Character Cards',
+  description: 'Set my description, please!',
+  harness: RiveHarness(
+    entryPoint: GenericRive(
+      assetPath: 'assets/riv/character_card/game_character_cards_demo.riv',
+      dataBind: DataBind.auto(),
+      fit: Fit.layout,
+      layoutScaleFactor: 0.5,
     ),
   ),
 );
