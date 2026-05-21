@@ -13,7 +13,7 @@ import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 final demoConfigurations = <DemoConfiguration>[
   duelistConfig,
   avatarCreatorConfig,
-  // characterCardConfig,
+  characterCardConfig,
   slotMachineConfig,
   aiDjConfig,
   scrollytellingConfig,
@@ -99,8 +99,12 @@ final characterCardConfig = DemoConfiguration(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/character_card/game_character_cards_demo.riv',
       dataBind: DataBind.auto(),
-      layoutScaleFactor: 0.5,
+      layoutScaleFactor: 0.3,
     ),
+    orientations: {
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    },
   ),
 );
 
