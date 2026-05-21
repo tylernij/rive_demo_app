@@ -10,6 +10,7 @@ import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 /// The demo configurations, ordered.
 final demoConfigurations = <DemoConfiguration>[
   duelistConfig,
+  avatarCreatorConfig,
   // characterCardConfig,
   slotMachineConfig,
   aiDjConfig,
@@ -78,6 +79,20 @@ final aiDjConfig = DemoConfiguration(
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/ai_dj/ai_dj_demo.riv',
+      dataBind: DataBind.auto(),
+      fit: Fit.layout,
+      layoutScaleFactor: 0.5,
+    ),
+  ),
+);
+
+/// AI DJ Demo.
+final avatarCreatorConfig = DemoConfiguration(
+  displayName: 'Avatar Creator',
+  description: 'Set my description, please!',
+  harness: RiveHarness(
+    entryPoint: GenericRive(
+      assetPath: 'assets/riv/avatar_creator/avatar_creator.riv',
       dataBind: DataBind.auto(),
       fit: Fit.layout,
       layoutScaleFactor: 0.5,
