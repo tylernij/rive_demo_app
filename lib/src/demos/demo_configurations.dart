@@ -45,8 +45,8 @@ const treasureChestConfig = DemoConfiguration(
   harness: RiveHarness(
     entryPoint: TreasureChest(),
     useSafeArea: true,
-    safeAreaLayouts: const {SafeAreaLayout.top},
-    backgroundColor: const Color(0xFF312030),
+    safeAreaLayouts: {SafeAreaLayout.top},
+    backgroundColor: Color(0xFF312030),
   ),
 );
 
@@ -80,13 +80,12 @@ final aiDjConfig = DemoConfiguration(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/ai_dj/ai_dj_demo.riv',
       dataBind: DataBind.auto(),
-      fit: Fit.layout,
       layoutScaleFactor: 0.5,
     ),
   ),
 );
 
-/// AI DJ Demo.
+/// Avatar Creator Demo.
 final avatarCreatorConfig = DemoConfiguration(
   displayName: 'Avatar Creator',
   description: 'Set my description, please!',
@@ -94,13 +93,12 @@ final avatarCreatorConfig = DemoConfiguration(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/avatar_creator/avatar_creator.riv',
       dataBind: DataBind.auto(),
-      fit: Fit.layout,
       layoutScaleFactor: 0.5,
     ),
   ),
 );
 
-/// AI DJ Demo.
+/// Character Cards Demo.
 final characterCardConfig = DemoConfiguration(
   displayName: 'Character Cards',
   description: 'Set my description, please!',
@@ -108,7 +106,6 @@ final characterCardConfig = DemoConfiguration(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/character_card/game_character_cards_demo.riv',
       dataBind: DataBind.auto(),
-      fit: Fit.layout,
       layoutScaleFactor: 0.5,
     ),
   ),
@@ -217,7 +214,6 @@ final fintechConfig = DemoConfiguration(
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/fintech/fintech_data_viz_v03.riv',
-      fit: Fit.layout,
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.5,
     ),
