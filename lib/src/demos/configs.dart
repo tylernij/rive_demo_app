@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
 import 'package:rive_demo_app/src/demos/data_viz/data_viz.dart';
@@ -255,6 +255,7 @@ final slotMachineConfig = DemoConfiguration(
       assetPath: 'assets/riv/slot_machine/slot_machine.riv',
       dataBind: DataBind.auto(),
     ),
+    orientations: const {DeviceOrientation.portraitUp},
   ),
 );
 
