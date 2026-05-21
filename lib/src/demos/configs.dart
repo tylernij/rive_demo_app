@@ -81,6 +81,10 @@ final aiDjConfig = DemoConfiguration(
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.5,
     ),
+    orientations: {
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    },
   ),
 );
 
@@ -88,7 +92,13 @@ final aiDjConfig = DemoConfiguration(
 const avatarCreatorConfig = DemoConfiguration(
   displayName: 'Avatar Creator',
   description: 'Set my description, please!',
-  harness: RiveHarness(entryPoint: AvatarCreator()),
+  harness: RiveHarness(
+    entryPoint: AvatarCreator(),
+    orientations: {
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    },
+  ),
 );
 
 /// Character Cards Demo.
@@ -153,6 +163,10 @@ final rtlLanguageLayoutConfig = DemoConfiguration(
       assetPath: 'assets/riv/rtl_language_layout/rtllanguagelayout.riv',
       dataBind: DataBind.auto(),
     ),
+    orientations: {
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    },
   ),
 );
 
