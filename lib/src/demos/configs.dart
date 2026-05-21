@@ -97,7 +97,7 @@ final characterCardConfig = DemoConfiguration(
   description: 'Set my description, please!',
   harness: RiveHarness(
     entryPoint: GenericRive(
-      assetPath: 'assets/riv/character_card/game_character_cards_demo.rivR',
+      assetPath: 'assets/riv/character_card/game_character_cards_demo.riv',
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.3,
     ),
