@@ -97,7 +97,7 @@ final characterCardConfig = DemoConfiguration(
   description: 'Set my description, please!',
   harness: RiveHarness(
     entryPoint: GenericRive(
-      assetPath: 'assets/riv/character_card/game_character_cards_demo.riv',
+      assetPath: 'assets/riv/character_card/game_character_cards_demo.rivR',
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.3,
     ),
@@ -218,13 +218,19 @@ final fintechConfig = DemoConfiguration(
 );
 
 /// Game Character Demo.
-const gameCharacterConfig = DemoConfiguration(
+final gameCharacterConfig = DemoConfiguration(
   displayName: 'Game Character',
   description: 'Set my description, please!',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/game_character/game_character_demo.riv',
+      dataBind: DataBind.auto(),
+      layoutScaleFactor: 0.5,
     ),
+    orientations: {
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    },
   ),
 );
 
