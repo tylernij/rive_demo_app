@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
-import 'package:rive_demo_app/src/demos/demo_configurations.dart';
+import 'package:rive_demo_app/src/demos/configs.dart';
 import 'package:rive_demo_app/src/model/demo_configuration.dart';
 
 /// The demo selection home screen.

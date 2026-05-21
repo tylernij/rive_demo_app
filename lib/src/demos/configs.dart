@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rive/rive.dart';
+import 'package:rive_demo_app/src/demos/avatar_creator/avatar_creator.dart';
 import 'package:rive_demo_app/src/demos/data_viz/data_viz.dart';
 import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
@@ -84,16 +85,10 @@ final aiDjConfig = DemoConfiguration(
 );
 
 /// Avatar Creator Demo.
-final avatarCreatorConfig = DemoConfiguration(
+const avatarCreatorConfig = DemoConfiguration(
   displayName: 'Avatar Creator',
   description: 'Set my description, please!',
-  harness: RiveHarness(
-    entryPoint: GenericRive(
-      assetPath: 'assets/riv/avatar_creator/avatar_creator.riv',
-      dataBind: DataBind.auto(),
-      layoutScaleFactor: 0.5,
-    ),
-  ),
+  harness: RiveHarness(entryPoint: AvatarCreator()),
 );
 
 /// Character Cards Demo.

@@ -24,7 +24,7 @@ class _AvatarDisplayScreenState extends State<AvatarDisplayScreen> {
   final GlobalKey _screenshotKey = GlobalKey();
 
   late final fileLoader = FileLoader.fromAsset(
-    'assets/riv/avatar_creator/avatar_creator.riv',
+    'assets/riv/avatar_creator/avatarcreatordevicewithlibrary.riv',
     riveFactory: Factory.rive,
   );
 
@@ -89,7 +89,10 @@ class _AvatarDisplayScreenState extends State<AvatarDisplayScreen> {
 
             return RepaintBoundary(
               key: _screenshotKey,
-              child: RiveWidget(controller: state.controller),
+              child: RiveWidget(
+                controller: state.controller,
+                layoutScaleFactor: 0.75,
+              ),
             );
           },
         ),

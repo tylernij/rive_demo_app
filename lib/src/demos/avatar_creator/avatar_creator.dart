@@ -13,7 +13,7 @@ class AvatarCreator extends StatefulWidget {
 
 class _AvatarCreatorState extends State<AvatarCreator> {
   late final fileLoader = FileLoader.fromAsset(
-    'assets/riv/avatar_creator/avatar_creator.riv',
+    'assets/riv/avatar_creator/avatarcreatordevicewithlibrary.riv',
     riveFactory: Factory.rive,
   );
   ViewModelInstance? vmi;
@@ -66,7 +66,11 @@ class _AvatarCreatorState extends State<AvatarCreator> {
         vmi = state.viewModelInstance;
         _registerListeners();
 
-        return RiveWidget(controller: state.controller, fit: Fit.layout);
+        return RiveWidget(
+          controller: state.controller,
+          fit: Fit.layout,
+          layoutScaleFactor: 0.75,
+        );
       },
     );
   }
