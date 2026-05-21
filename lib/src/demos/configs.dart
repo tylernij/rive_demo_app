@@ -4,6 +4,7 @@ import 'package:rive_demo_app/src/demos/data_viz/data_viz.dart';
 import 'package:rive_demo_app/src/demos/duelist/duelist.dart';
 import 'package:rive_demo_app/src/demos/generic_rive/generic_rive.dart';
 import 'package:rive_demo_app/src/demos/treasure_chest/treasure_chest.dart';
+import 'package:rive_demo_app/src/model/demo_configuration.dart';
 import 'package:rive_demo_app/src/model/safe_area_layout.dart';
 import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 
@@ -34,9 +35,6 @@ final demoConfigurations = <DemoConfiguration>[
   // musicPlayerConfig,
   // inventoryConfig,
 ];
-
-/// ============================== CONFIGURATIONS ==============================
-/// Define the demo configurations here.
 
 /// Treasure Chest Demo.
 const treasureChestConfig = DemoConfiguration(
@@ -287,25 +285,3 @@ final sportsBroadcastConfig = DemoConfiguration(
     ),
   ),
 );
-
-/// ============================== CONFIGURATIONS ==============================
-
-/// The configuration profile for each demo.
-class DemoConfiguration {
-  /// Creates a new [DemoConfiguration].
-  const DemoConfiguration({
-    required this.displayName,
-    required this.description,
-    required this.harness,
-  });
-
-  /// The demo display name.
-  final String displayName;
-
-  /// The demo description.
-  final String description;
-
-  /// The demo entry point, typically in a harness.
-  /// See [RiveHarness] for advanced configuration.
-  final Widget harness;
-}
