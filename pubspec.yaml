@@ -37,6 +37,7 @@ flutter:
     - assets/riv/car_widget/
     - assets/riv/fintech/
     - assets/riv/game_character/
+    - assets/riv/character_card/
     - assets/riv/car_component/
     - assets/riv/music_player/
     - assets/riv/treasure_chest/
