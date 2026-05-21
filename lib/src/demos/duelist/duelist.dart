@@ -32,6 +32,15 @@ class _DuelistState extends State<Duelist> {
           return const Center(child: CircularProgressIndicator());
         }
 
+        final vmi = state.viewModelInstance!;
+        final buttons = vmi.list('Navigation/Buttons')!;
+        final quitButton = buttons.last();
+        final quitSubButtons = quitButton.list('SubButtons')!;
+        final quitYesButton = quitSubButtons.first();
+        quitYesButton.trigger('click')!.addListener((_) {
+          Navigator.pop(context);
+        });
+
         return RiveWidget(
           controller: state.controller,
           fit: Fit.layout,
