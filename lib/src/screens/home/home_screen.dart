@@ -40,10 +40,15 @@ class _HomeScreenState extends State<HomeScreen> {
     ViewModelInstanceTrigger trigger,
     DemoConfiguration config,
   ) {
+    // Do not animate.
     trigger.addListener((value) async {
       await Navigator.push(
         context,
-        MaterialPageRoute<void>(builder: (context) => config.harness),
+        PageRouteBuilder<void>(
+          pageBuilder: (_, _, _) => config.harness,
+          transitionDuration: Duration.zero,
+          reverseTransitionDuration: Duration.zero,
+        ),
       );
     });
   }
