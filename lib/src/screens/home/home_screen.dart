@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_demo_app/src/demos/configs.dart';
 import 'package:rive_demo_app/src/model/demo_configuration.dart';
@@ -17,6 +20,17 @@ class _HomeScreenState extends State<HomeScreen> {
     'assets/riv/home/rive_demo_app_v02.riv',
     riveFactory: Factory.rive,
   );
+
+  /// Lock the orientation on the home screen.
+  Future<void> _lockOrientation() async {
+    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    unawaited(_lockOrientation());
+  }
 
   @override
   void dispose() {
@@ -46,6 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
         context,
         MaterialPageRoute<void>(builder: (context) => config.harness),
       );
+
+      // Restore locked orientation.
+      await _lockOrientation();
     });
   }
 
