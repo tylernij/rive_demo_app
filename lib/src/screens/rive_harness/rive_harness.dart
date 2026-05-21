@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:rive_demo_app/src/model/safe_area_layout.dart';
 
 /// The container around a generic .riv file to provide extra functionality.
@@ -21,6 +24,7 @@ class RiveHarness extends StatefulWidget {
       SafeAreaLayout.bottom,
       SafeAreaLayout.top,
     },
+    this.orientations,
     super.key,
   });
 
@@ -45,11 +49,26 @@ class RiveHarness extends StatefulWidget {
   /// Which sides to use for the [SafeArea].
   final Set<SafeAreaLayout> safeAreaLayouts;
 
+  /// The list of accepted orientations.
+  final Set<DeviceOrientation>? orientations;
+
   @override
   State<RiveHarness> createState() => _HarnessState();
 }
 
 class _HarnessState extends State<RiveHarness> {
+  @override
+  void initState() {
+    super.initState();
+    unawaited(_applyOrientations());
+  }
+
+  /// Set the supported orientations for the device.
+  Future<void> _applyOrientations() async {
+    if (widget.orientations == null) return;
+    await SystemChrome.setPreferredOrientations(widget.orientations!.toList());
+  }
+
   Widget _backButton() {
     return FloatingActionButton.small(
       shape: const CircleBorder(),
