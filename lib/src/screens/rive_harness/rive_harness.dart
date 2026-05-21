@@ -60,13 +60,23 @@ class _HarnessState extends State<RiveHarness> {
   @override
   void initState() {
     super.initState();
-    unawaited(_applyOrientations());
+
+    // Lock orientation if needed.
+    if (widget.orientations != null) {
+      unawaited(
+        SystemChrome.setPreferredOrientations(widget.orientations!.toList()),
+      );
+    }
   }
 
-  /// Set the supported orientations for the device.
-  Future<void> _applyOrientations() async {
-    if (widget.orientations == null) return;
-    await SystemChrome.setPreferredOrientations(widget.orientations!.toList());
+  @override
+  void dispose() {
+    // Unlock orientation if needed.
+    if (widget.orientations != null) {
+      unawaited(SystemChrome.setPreferredOrientations([]));
+    }
+
+    super.dispose();
   }
 
   Widget _backButton() {
