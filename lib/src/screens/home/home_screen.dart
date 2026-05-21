@@ -63,8 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
           // Bind to already-created instance so trigger fires.
           final realListItemInstance = listProp.instanceAt(listProp.length - 1);
-          final clickProp = realListItemInstance.trigger('click')!;
-          _bindTriggerToConfig(clickProp, config);
+          final selectProp = realListItemInstance.trigger('select')!;
+          _bindTriggerToConfig(selectProp, config);
         }
       },
       builder: (context, state) {
