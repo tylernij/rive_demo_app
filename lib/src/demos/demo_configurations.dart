@@ -10,14 +10,14 @@ import 'package:rive_demo_app/src/screens/rive_harness/rive_harness.dart';
 /// The demo configurations, ordered.
 final demoConfigurations = <DemoConfiguration>[
   duelistConfig,
-  characterCardConfig,
+  // characterCardConfig,
   slotMachineConfig,
   aiDjConfig,
   scrollytellingConfig,
   treasureChestConfig,
   fintechConfig,
   adWidgetConfig,
-  carWidgetConfig,
+  // carWidgetConfig,
   dataVizConfig,
   rtlLanguageLayoutConfig,
   featheringButtonConfig,
