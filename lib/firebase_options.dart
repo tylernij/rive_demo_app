@@ -60,11 +60,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDCnARq57_jf96ngNW2cw64ZHjt3xZmNE8',
-    appId: '1:669065642915:ios:d3b23b8c2e1c96216d9016',
+    appId: '1:669065642915:ios:d958dc222db2b86b6d9016',
     messagingSenderId: '669065642915',
     projectId: 'rive-demo-app',
     storageBucket: 'rive-demo-app.firebasestorage.app',
-    iosBundleId: 'com.rive.riveDemoApp',
+    iosBundleId: 'app.rive.riveDemoApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
