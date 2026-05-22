@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "669065642915",
+    "project_id": "rive-demo-app",
+    "storage_bucket": "rive-demo-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669065642915:android:d0bab14ca429f0396d9016",
+        "android_client_info": {
+          "package_name": "com.rive.rive_demo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKKU5ArJ0zXrYLwbweoW_hj4ffcpgKgyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
