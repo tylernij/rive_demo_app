@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: RiveWidget(
               controller: state.controller,
               fit: Fit.layout,
-              layoutScaleFactor: 0.35,
+              layoutScaleFactor: 0.45,
             ),
           ),
         );
