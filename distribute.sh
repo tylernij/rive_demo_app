@@ -2,10 +2,10 @@
 
 set -e
 
-FIREBASE_APP_ID_IOS="1:669065642915:ios:d3b23b8c2e1c96216d9016"
+FIREBASE_APP_ID_IOS="1:669065642915:ios:d958dc222db2b86b6d9016"
 FIREBASE_APP_ID_ANDROID="1:669065642915:android:d0bab14ca429f0396d9016"
 FIREBASE_TESTERS_GROUP="latest"
-RELEASE_NOTES="Rolling release: $(date)"
+RELEASE_NOTES="Rolling release: $(date)\n\n$(git log --oneline | tail -n 10)"
 
 function ios() {
 	flutter build ipa --release --export-method development
@@ -29,7 +29,7 @@ function android() {
 
 function distribute() {
 	ios
-	android
+	# android
 }
 
 [[ "${BASH_SOURCE[0]}" == "$0" ]] && distribute
