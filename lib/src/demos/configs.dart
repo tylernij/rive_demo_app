@@ -40,7 +40,8 @@ final demoConfigurations = <DemoConfiguration>[
 /// Treasure Chest Demo.
 const treasureChestConfig = DemoConfiguration(
   displayName: 'Treasure Chest',
-  description: 'Set my description, please!',
+  description:
+      'Responsive game reward screen where values, reward types, and animations are driven by data.',
   harness: RiveHarness(
     entryPoint: TreasureChest(),
     useSafeArea: true,
@@ -52,7 +53,8 @@ const treasureChestConfig = DemoConfiguration(
 /// Duelist Demo.
 const duelistConfig = DemoConfiguration(
   displayName: 'Duelist',
-  description: 'Set my description, please!',
+  description:
+      'Explore an interactive game-style menu complete with navigation, animations, and responsive layouts. Different menu selections trigger unique character reactions and audio feedback.',
   harness: RiveHarness(
     entryPoint: Duelist(),
     showBackButton: false,
@@ -62,7 +64,8 @@ const duelistConfig = DemoConfiguration(
 /// Feathering Button Demo.
 final featheringButtonConfig = DemoConfiguration(
   displayName: 'Feathering Button',
-  description: 'Set my description, please!',
+  description:
+      'A simple button showcasing how Feathering can add depth, lighting, and polish to everyday UI elements.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/feathering_button/push_button.riv',
@@ -74,7 +77,8 @@ final featheringButtonConfig = DemoConfiguration(
 /// AI DJ Demo.
 final aiDjConfig = DemoConfiguration(
   displayName: 'AI DJ Music Player',
-  description: 'Set my description, please!',
+  description:
+      'Experience an interactive onboarding flow for a music app that combines motion, data, and polished transitions.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/ai_dj/ai_dj_demo.riv',
@@ -91,7 +95,10 @@ final aiDjConfig = DemoConfiguration(
 /// Avatar Creator Demo.
 const avatarCreatorConfig = DemoConfiguration(
   displayName: 'Avatar Creator',
-  description: 'Set my description, please!',
+  description: '''
+Build and customize a character in real time.
+
+When you are done, save your creation as an image.''',
   harness: RiveHarness(
     entryPoint: AvatarCreator(),
     orientations: {
@@ -104,7 +111,8 @@ const avatarCreatorConfig = DemoConfiguration(
 /// Character Cards Demo.
 final characterCardConfig = DemoConfiguration(
   displayName: 'Character Cards',
-  description: 'Set my description, please!',
+  description:
+      'Explore a collection of characters organized into different tabs, with each character displaying its own unique details and content.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/character_card/game_character_cards_demo.riv',
@@ -121,7 +129,9 @@ final characterCardConfig = DemoConfiguration(
 /// Feathering Coin Demo.
 const featheringCoinConfig = DemoConfiguration(
   displayName: 'Feathering Coin',
-  description: 'Set my description, please!',
+  description: '''Create realistic shadows and depth using Vector Feathering.
+
+Move your finger to see lighting and volume respond in real time.''',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/feathering_coin/coin_demo_feathering.riv',
@@ -133,7 +143,10 @@ const featheringCoinConfig = DemoConfiguration(
 /// Data Viz Demo.
 const dataVizConfig = DemoConfiguration(
   displayName: 'Data Viz',
-  description: 'Set my description, please!',
+  description: '''
+Explore animated charts and graphs that respond dynamically to changing data.
+
+Tap the pie chart see it update in real time.''',
   harness: RiveHarness(
     entryPoint: DataViz(),
   ),
@@ -142,7 +155,8 @@ const dataVizConfig = DemoConfiguration(
 /// Ad Widget Demo.
 final adWidgetConfig = DemoConfiguration(
   displayName: 'Ad Widget',
-  description: 'Set my description, please!',
+  description:
+      'See how Rive can power engaging, interactive ads that go beyond static banners — from product showcases to rich experiences.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/ad_widget/amazon_ad-demo_2026.riv',
@@ -154,7 +168,8 @@ final adWidgetConfig = DemoConfiguration(
 /// RTL Language Layout Demo.
 final rtlLanguageLayoutConfig = DemoConfiguration(
   displayName: 'RTL Language Layout',
-  description: 'Set my description, please!',
+  description: '''
+See how experiences can adapt across languages with dynamic font swapping and layout changes.''',
   harness: RiveHarness(
     useSafeArea: true,
     safeAreaLayouts: const {SafeAreaLayout.bottom},
@@ -186,7 +201,8 @@ final liquidDownloadConfig = DemoConfiguration(
 /// Scrollytelling Demo.
 final scrollytellingConfig = DemoConfiguration(
   displayName: 'Scrollytelling',
-  description: 'Set my description, please!',
+  description:
+      'Explore an interactive storytelling experience built entirely in Rive, combining scrolling, animation, and user interaction into a seamless flow.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath:
@@ -221,7 +237,8 @@ const carWidgetConfig = DemoConfiguration(
 /// Fintech Demo.
 final fintechConfig = DemoConfiguration(
   displayName: 'Fintech',
-  description: 'Set my description, please!',
+  description:
+      'Explore a financial dashboard with cards displaying live market information and changing values.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/fintech/fintech_data_viz_v03.riv',
@@ -273,7 +290,8 @@ const musicPlayerConfig = DemoConfiguration(
 /// Slot Machine Demo.
 final slotMachineConfig = DemoConfiguration(
   displayName: 'Slot Machine',
-  description: 'Set my description, please!',
+  description:
+      'Play a fully interactive slot machine game built entirely inside Rive using scripting.',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/slot_machine/slot_machine.riv',
@@ -297,7 +315,10 @@ const inventoryConfig = DemoConfiguration(
 /// Sports Broadcast Demo.
 final sportsBroadcastConfig = DemoConfiguration(
   displayName: 'Sports Broadcast',
-  description: 'Set my description, please!',
+  description: '''
+Create dynamic broadcast graphics where player information can update instantly, including images, names, team details, and colors.
+
+Tap anywhere to swap players.''',
   harness: RiveHarness(
     entryPoint: GenericRive(
       assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
