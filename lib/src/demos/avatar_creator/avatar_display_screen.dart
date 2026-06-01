@@ -24,7 +24,7 @@ class _AvatarDisplayScreenState extends State<AvatarDisplayScreen> {
   final GlobalKey _screenshotKey = GlobalKey();
 
   late final fileLoader = FileLoader.fromAsset(
-    'assets/riv/avatar_creator/avatarcreatordevicewithlibrary.riv',
+    'assets/riv/avatar_creator/avatarcreatordevice_attemptinghaircolorfix.riv',
     riveFactory: Factory.rive,
   );
 
