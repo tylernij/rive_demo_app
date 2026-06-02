@@ -29,7 +29,7 @@ function android() {
 
 function distribute() {
 	ios
-	# android
+	android
 }
 
 [[ "${BASH_SOURCE[0]}" == "$0" ]] && distribute
