@@ -26,6 +26,7 @@ final demoConfigurations = <DemoConfiguration>[
   featheringButtonConfig,
   featheringCoinConfig,
   sportsBroadcastConfig,
+  goodJobGamesConfig,
 
   // Not done, might not include
   //
@@ -85,7 +86,7 @@ final aiDjConfig = DemoConfiguration(
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.5,
     ),
-    orientations: {
+    orientations: const {
       DeviceOrientation.portraitDown,
       DeviceOrientation.portraitUp,
     },
@@ -119,7 +120,7 @@ final characterCardConfig = DemoConfiguration(
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.3,
     ),
-    orientations: {
+    orientations: const {
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     },
@@ -178,7 +179,7 @@ See how experiences can adapt across languages with dynamic font swapping and la
       assetPath: 'assets/riv/rtl_language_layout/rtllanguagelayout.riv',
       dataBind: DataBind.auto(),
     ),
-    orientations: {
+    orientations: const {
       DeviceOrientation.portraitDown,
       DeviceOrientation.portraitUp,
     },
@@ -258,7 +259,7 @@ final gameCharacterConfig = DemoConfiguration(
       dataBind: DataBind.auto(),
       layoutScaleFactor: 0.5,
     ),
-    orientations: {
+    orientations: const {
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     },
@@ -324,5 +325,23 @@ Tap anywhere to swap players.''',
       assetPath: 'assets/riv/sports_broadcast/sports_broadcaat.riv',
       dataBind: DataBind.auto(),
     ),
+  ),
+);
+
+/// Good Job Games Demo.
+final goodJobGamesConfig = DemoConfiguration(
+  displayName: 'Good Job Games',
+  description: '''REPLACEME''',
+  harness: RiveHarness(
+    entryPoint: GenericRive(
+      assetPath: 'assets/riv/good_job_games/good_job_games_test_box2d.riv',
+      dataBind: DataBind.auto(),
+      layoutScaleFactor: 0.6,
+      fit: Fit.contain,
+    ),
+    orientations: const {
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    },
   ),
 );
