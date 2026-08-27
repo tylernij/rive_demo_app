@@ -8,17 +8,17 @@ FIREBASE_TESTERS_GROUP="latest"
 RELEASE_NOTES="Rolling release: $(date)\n\n$(git log --oneline | tail -n 10)"
 
 function ios() {
-	flutter build ipa --release --export-method development
+	flutter build ipa --release --export-method ad-hoc
 	firebase \
 		appdistribution:distribute \
-		build/ios/ipa/rive_demo_app.ipa \
+		"build/ios/ipa/Rive Demo App.ipa" \
 		--app "$FIREBASE_APP_ID_IOS" \
 		--groups "$FIREBASE_TESTERS_GROUP" \
 		--release-notes "$RELEASE_NOTES"
 }
 
 function android() {
-    flutter build apk --release
+   	flutter build apk --release
     firebase \
         appdistribution:distribute \
         build/app/outputs/flutter-apk/app-release.apk \
@@ -29,7 +29,7 @@ function android() {
 
 function distribute() {
 	ios
-	android
+#	android
 }
 
 [[ "${BASH_SOURCE[0]}" == "$0" ]] && distribute
